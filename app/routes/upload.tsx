@@ -11,6 +11,10 @@ const upload = () => {
        setFile(file)
     }
 
+    const handleAnalyze = () =>{
+        
+    }
+
     const handleSubmit = (e: FormEvent<HTMLFormElement>) =>{
      e.preventDefault()
      const form = e.currentTarget.closest('form')
@@ -21,13 +25,15 @@ const upload = () => {
      const companyName = formData.get('company-name')
      const jobTitle = formData.get('job-title')
      const jobDescription = formData.get('job-description')
+
+     if(!file) return 
     }
 
     return(
       <main className="bg-[url('/images/bg-main.svg')] bg-cover">
     <Navbar />
 
-  <section className="main-section">
+            <section className="main-section">
     <div className="page-heading py-16">
         <h1>Smart feedback for your resume.</h1>
         {isProcessing ? (
